@@ -1,1 +1,136 @@
+/*
+------------------------------------------------------------
+Project Name : Sample Project;
+------------------------------------------------------------
+*/
 
+/* Reset
+--------------------------------------------------------------------------------------------------------*/
+
+/*
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* General
+--------------------------------------------------------------------------------------------------------*/
+* { outline: none !important; }
+a{transition: all 0.3s;}
+html, body { min-width: 320px; min-height: 100vh; }
+body { font-size: 16px; line-height: 22px; font-family: 'Raleway', sans-serif; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
+.wrapper { min-height: 100vh; }
+a { color: #000; text-decoration: none; }
+a:hover { color: #999; text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.2em; padding: 0 0 20px; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { display: block; }
+.row{margin:0;}
+p { padding: 0 0 20px; }
+input[type=text], input[type=email], input[type=password], textarea { -webkit-appearance: none; appearance: none;border-color: #e4e4e4; }
+input[type="text"]::placeholder,
+input[type="password"]::placeholder{color: #6A6C6F;}
+input[type="text"]:focus,
+input[type="password"]:focus {border-color: #17a2b8;box-shadow: inset 0 1px 1px rgba(63, 81, 118, 0.075), 0 0 8px rgba(63, 81, 118, 0.3);}
+::-webkit-input-placeholder { color: #000; }
+::-moz-placeholder { color: #000; }
+:-ms-input-placeholder { color: #000; }
+:-moz-placeholder { color: #000; }
+::-moz-focus-inner { border: 0; }
+select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+option:not(:checked) { color: black; }
+
+/* Header
+--------------------------------------------------------------------------------------------------------*/
+.logo { display: inline-block; }
+.logo>img { display: block; }
+
+/* MainNavigation
+--------------------------------------------------------------------------------------------------------*/
+
+/* Login
+--------------------------------------------------------------------------------------------------------*/
+.login-left {padding-top:50px;flex-direction: column;display: flex;align-items: center;overflow: hidden;background-color: #0057a1;}
+.login-header{display: flex;justify-content: center;align-items: center;}
+.logo{width: 266px;}
+.btn-login.MuiButton-containedPrimary{padding: 0 44px;color:#0057a1;font-weight: bold;font-size: 14px;height: 48px;border-color:#fff;background-color:#fff;text-transform: uppercase;border-radius: 2px;}
+.btn-login.MuiButton-containedPrimary:hover {box-shadow: none !important;background-color:#e9ecef;border-color: #e9ecef;color: #5dade2;}
+.MuiButton-contained.btn-login:active{box-shadow: none;}
+.MuiGrid-root .MuiButton-contained{box-shadow: none;}
+.login-text {font-size: 22px;text-transform: uppercase;color: #fff;}
+.login-form{margin-top: 60px;}
+.login-form .MuiFormLabel-root{color:#67a5da !important;}
+.MuiFormGroup-root input[type="text"]:focus, input[type="password"]:focus {color: rgb(248, 237, 237);border-color: transparent;box-shadow:none;}
+.MuiFormGroup-root .MuiInputBase-input{color: #fff;}
+.MuiFormGroup-root .MuiInput-underline:before,.MuiFormGroup-root .MuiInput-underline:after {border-bottom: 1px solid #67a5da;}
+.login-form .MuiFormGroup-root{margin-bottom: 31px;}
+.MuiFormGroup-root .MuiInput-underline:hover:not(.Mui-disabled):before {border-bottom: 2px solid #67a5da;}
+.forgot-password {text-align: right;padding-right: 0px;}
+.MuiGrid-root .forgot-password{margin-top: 15px;}
+.forgot-password a {color: #67a5da;font-size: 14px;}
+.forgot-password a:hover {color: #a1abe4;}
+.signup-account {margin-top: 50px;font-size: 14px;}
+.account {color:  #67a5da;}
+.signup {color: #fff;font-weight: bold;padding-left: 8px;}
+.signup:hover{color:#ced4da;}
+.login-right{background-image:url('../src/app/assets/images/company-building.jpg');height: 100vh;background-size: cover;background-repeat: no-repeat;}
+.login-left .login-form {max-width: 374px;width: 100%;} 
+
+/* Footer
+--------------------------------------------------------------------------------------------------------*/
+.dashboard-copyright { color: #67a5da; font-size:13px;text-align: center;position: fixed;bottom: 0;}
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width:1199px) {
+
+/* Login
+ --------------------------------------------------------------------------------------------------------*/
+
+}
+
+    
+@media (max-width:991px) {
+    
+/* Login
+--------------------------------------------------------------------------------------------------------*/
+.main-content{background-image:url('../src/app/assets/images/company-building.jpg');height: 100vh;background-size: cover;background-repeat: no-repeat;} 
+.login-right{display: none;}
+.login-left{background-color: rgba(0,87,161,0.9);width: 100%;height: 100vh;}
+.login-form{margin-top: 50px;}
+}
+    
+@media (max-width:767px) {
+    
+/* Login
+--------------------------------------------------------------------------------------------------------*/
+}
+
+    
+@media (max-width:575px) {
+    
+/* Login
+--------------------------------------------------------------------------------------------------------*/ 
+.MuiGrid-root .forgot-password {margin-top: -36px;} 
+.login-left{padding-top: 40px;} 
+.login-form{margin-top: 35px;} 
+.login-left .login-form {max-width: 374px;width: auto;}  
+.MuiGrid-root .forgot-password {margin-top: 25px;text-align: left;} 
+.signup-account{margin-top: 30px;}
+.logo{width: 250px;}
+}
+    
+@media (max-width:375px) {
+}
+    
+@media (max-width:320px) {
+    
+}
