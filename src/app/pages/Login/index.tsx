@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <main className="main-content">
       <Grid container>
-        <Grid item xl={5} md={6} className="login-left">
+        <Grid item xl={5} md={6}  className="login-left">
           <div className="login-header">
             <Link to="#">
               <img src={Logo} alt="" className="img-responsive logo" />
@@ -17,14 +17,14 @@ const Login = () => {
 
           <div className="login-form">
             <h3 className="login-text">Login</h3>
-            <form>
-              <FormGroup>
-                <TextField id="uname" label="Username" />
-              </FormGroup>
-              <FormGroup>
-                <TextField id="Password" type="password" label="Password" />
-              </FormGroup>
-            </form>
+
+            <FormGroup>
+              <TextField id="uname" label="Username" />
+            </FormGroup>
+            <FormGroup>
+              <TextField id="Password" type="password" label="Password" />
+            </FormGroup>
+
             <Grid container>
               <Grid item xs={12} sm={6}>
                 <Button
@@ -54,7 +54,7 @@ const Login = () => {
           <Footer />
         </Grid>
 
-        <Grid item md={6} xl={7}>
+        <Grid item xl={7} md={6} >
           <div className="login-right"></div>
         </Grid>
       </Grid>
