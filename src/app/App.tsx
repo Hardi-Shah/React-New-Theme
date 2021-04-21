@@ -32,9 +32,6 @@ function App() {
               <Login />
             </Route>
             <Route exact path="/dashboard" component={Dashboard} />
-            {/* <Helmet>
-                <title>Dashboard | Theme</title>
-              </Helmet> */}
           </Switch>
         </div>
       </Router>
