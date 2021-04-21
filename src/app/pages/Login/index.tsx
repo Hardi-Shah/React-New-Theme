@@ -2,24 +2,24 @@ import { FormGroup, Grid, TextField } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import { Logo } from "../../assets/images";
-import Footer from "../../components/Footer";
 
 const Login = () => {
   return (
+    /* Start Main */
     <main className="main-content">
-      <Grid container>
-        <Grid item xl={5} md={6} className="login-left">
+      <div className="login-container">
+        <div className="login-left">
           <div className="login-header">
-            <Link to="#">
-              <img src={Logo} alt="" className="img-responsive logo" />
+            <Link to="#" title="logo">
+              <img src={Logo} alt="logo" className="logo" />
             </Link>
           </div>
 
           <div className="login-form">
-            <h3 className="login-text">Login</h3>
+            <h3>Login</h3>
 
             <FormGroup>
-              <TextField id="uname" label="Username" />
+              <TextField id="Username" label="Username" />
             </FormGroup>
             <FormGroup>
               <TextField id="Password" type="password" label="Password" />
@@ -32,10 +32,9 @@ const Login = () => {
                   variant="contained"
                   color="primary"
                   className="btn-login"
-                  disableRipple={true}
                 >
                   Login
-                </Button>{" "}
+                </Button>
               </Grid>
 
               <Grid item xs={12} sm={6} className="forgot-password">
@@ -43,22 +42,19 @@ const Login = () => {
               </Grid>
             </Grid>
             <div className="signup-account">
-              <span className="account">Don't have an account?</span>
-              <span>
-                <Link to="#" className="signup">
-                  Sign Up
-                </Link>
-              </span>
+              Don't have an account?
+              <Link to="#" title="sign-up">
+                Sign Up
+              </Link>
             </div>
           </div>
-          <Footer />
-        </Grid>
-
-        <Grid item xl={7} md={6}>
-          <div className="login-right"></div>
-        </Grid>
-      </Grid>
+          <div className="dashboard-copyright">
+            &copy; 2021 Company.All rights reserved.
+          </div>
+        </div>
+      </div>
     </main>
+    /* End Main */
   );
 };
 

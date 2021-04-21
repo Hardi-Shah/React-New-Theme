@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 
 function App() {
   const theme = createMuiTheme({
@@ -23,7 +24,12 @@ function App() {
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/">
+              <Helmet>
+                <title>Login | Theme</title>
+              </Helmet>
+              <Login />
+            </Route>
           </Switch>
         </div>
       </Router>
