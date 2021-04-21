@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
 import { Helmet } from "react-helmet";
 
@@ -30,6 +31,10 @@ function App() {
               </Helmet>
               <Login />
             </Route>
+            <Route exact path="/dashboard" component={Dashboard} />
+            {/* <Helmet>
+                <title>Dashboard | Theme</title>
+              </Helmet> */}
           </Switch>
         </div>
       </Router>
