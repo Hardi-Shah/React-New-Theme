@@ -48,6 +48,7 @@ const Header = () => {
       .classList.toggle("display-block-toggle");
   }
   return (
+    /* Start Header */
     <nav className="navbar navbar-expand navbar-light fixed-top">
       <div className="horizontal-logo-div">
         <img src={Logo} alt="logo" className="horizontal-logo" />
@@ -218,6 +219,8 @@ const Header = () => {
         </ul>
       </div>
     </nav>
+    /* End Header */
+
   );
 };
 

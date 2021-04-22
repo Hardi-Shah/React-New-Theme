@@ -11,6 +11,7 @@ import {
 
 const Sidebar = () => {
   return (
+      /* Start Sidebar */
     <div id="Sidebar" className="sidenav">
       <div className="sidebar-list">
         <Link to="/dashboard">
@@ -83,6 +84,7 @@ const Sidebar = () => {
         </Link>
       </div>
     </div>
+     /* End Sidebar */
   );
 };
 

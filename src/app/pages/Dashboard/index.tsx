@@ -49,6 +49,29 @@ const Dashboard = () => {
     document.getElementById("Sidebar")!.classList.toggle("sidenav-toggle");
     document.getElementById("main")!.classList.toggle("main-toggle");
   }
+
+  function createData(
+    date: string,
+    comapny: string,
+    name: string,
+    type: string,
+    contact: string,
+    area: string,
+    status: string,
+    classBtn: string
+  ) {
+    return { date, comapny, name, type, contact, area, status, classBtn };
+  }
+
+  const rows = [
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Active","btn-active"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Pending","btn-pending"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Cancelled","btn-cancelled"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Completed","btn-completed"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Active","btn-active"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Active","btn-active"),
+    createData("12/09/2019","AB Technology","John Doe","PAD","99823982373","Gujarat","Pending", "btn-pending"),
+  ];
   return (
     /* Start Wrapper */
     <div className="wrapper">
@@ -58,10 +81,11 @@ const Dashboard = () => {
       <div id="overlay" onClick={() => toggleOverlay()}></div>
       <Header />
       <Sidebar />
+      {/* Start Dashboard  */}
       <div id="main">
         <div className="dashboard-content">
-          <Grid container className="admin-content">
-            <Grid item xs={12} className="col-md-6 dashboard-sort">
+          <Grid container spacing={4} className="admin-content">
+            <Grid item xs={12} className=" dashboard-sort">
               <h3 className="dashboard-header">Dashboard</h3>
               <span className="select-div">
                 <FormLabel>Sort by</FormLabel>
@@ -69,17 +93,18 @@ const Dashboard = () => {
                   <Select
                     id="entry"
                     value={select}
+                    autoWidth={true}
                     className="select-entry"
                     onChange={handleChangeSelect}
                   >
-                    <MenuItem value={"Today"}>Today</MenuItem>
-                    <MenuItem value={"Yesterday"}>Yesterday</MenuItem>
-                    <MenuItem value={"NextDay"}>NextDay</MenuItem>
+                    <MenuItem value="Today">Today</MenuItem>
+                    <MenuItem value="Yesterday">Yesterday</MenuItem>
+                    <MenuItem value="NextDay">NextDay</MenuItem>
                   </Select>
                 </FormControl>
               </span>
             </Grid>
-            <Grid item xs={12} lg={4} sm={6} md={6} xl className="col-md-6">
+            <Grid item xs={12} lg={4} sm={6} md={6} xl>
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
@@ -94,30 +119,30 @@ const Dashboard = () => {
                       className="stats-img-1"
                     />
                     <div className="visitors-div">
-                      <h3 className="visitors-number">120,570</h3>
-                      <p className="visitors-text">Visitors</p>
+                      <div className="visitors-number">120,570</div>
+                      <div className="visitors-text">Visitors</div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xs={12} lg={4} sm={6} md={6} xl className="col-md-6">
+            <Grid item xs={12} lg={4} sm={6} md={6} xl>
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
                     <img src={SalesIcon} alt="sales" className="stats-img" />
                     <img src={Sales1Icon} alt="sales" className="stats-img-1" />
                     <div className="visitors-div">
-                      <h3 className="visitors-number">150</h3>
-                      <p className="visitors-text">Sales</p>
+                      <div className="visitors-number">150</div>
+                      <div className="visitors-text">Sales</div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item lg={4} xs={12} sm={6} md={6} xl className="col-md-6">
+            <Grid item lg={4} xs={12} sm={6} md={6} xl>
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
@@ -132,15 +157,15 @@ const Dashboard = () => {
                       className="stats-img-1"
                     />
                     <div className="visitors-div">
-                      <h3 className="visitors-number">3,200</h3>
-                      <p className="visitors-text">Earnings</p>
+                      <div className="visitors-number">3,200</div>
+                      <div className="visitors-text">Earnings</div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item lg={6} xs={12} sm={6} md={6} xl className="col-md-6">
+            <Grid item lg={6} xs={12} sm={6} md={6} xl>
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
@@ -155,15 +180,15 @@ const Dashboard = () => {
                       className="stats-img-1"
                     />
                     <div className="visitors-div">
-                      <h3 className="visitors-number">210</h3>
-                      <p className="visitors-text">Avg Sale</p>
+                      <div className="visitors-number">210</div>
+                      <div className="visitors-text">Avg Sale</div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item lg={6} xs={12} sm={12} md={12} xl className="col-md-6">
+            <Grid item lg={6} xs={12} sm={12} md={12} xl>
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
@@ -178,37 +203,36 @@ const Dashboard = () => {
                       className="stats-img-1"
                     />
                     <div className="visitors-div">
-                      <h3 className="visitors-number">20</h3>
-                      <p className="visitors-text">Total Loss</p>
+                      <div className="visitors-number">20</div>
+                      <div className="visitors-text">Total Loss</div>
                     </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xl={5} xs={12} className="col-md-6 sales-grid1">
+            <Grid item xl={5} xs={12} className="sales-grid1">
               <div className="card sales-card-1">
                 <div className="card-body">
-                  <div className="analytics-div ">
+                  <div className="analytics-div">
                     <h3>Sales</h3>
                     <img
                       src={ThreeDotIcon}
                       alt="three-dot"
                       className="dot-img"
                     />
-                    <div className="analytics-image">
-                      <img
-                        className="analytic-img"
-                        src={SalesGraph1Icon}
-                        alt="sales-graph"
-                      />
-                    </div>
+
+                    <img
+                      className="analytic-img"
+                      src={SalesGraph1Icon}
+                      alt="sales-graph"
+                    />
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xl={7} xs={12} className="col-md-6 sales-grid2">
+            <Grid item xl={7} xs={12} className="sales-grid2">
               <div className="card sales-card-2">
                 <div className="card-body">
                   <div className="analytics-div ">
@@ -218,22 +242,21 @@ const Dashboard = () => {
                       alt="three-dot"
                       className="dot-img"
                     />
-                    <div className="analytics-image">
-                      <img
-                        className="analytic-img"
-                        src={SalesGraph2Icon}
-                        alt="sales-graph"
-                      />
-                    </div>
+
+                    <img
+                      className="sales-graph"
+                      src={SalesGraph2Icon}
+                      alt="sales-graph"
+                    />
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} className="col-md-6 col-sm-12 ">
+            <Grid item xs={12} sm={12} md={12} className="table-grid">
               <div className="card analytic-card">
                 <div className="card-body">
-                  <div className="table-div ">
+                  <div className="table-div">
                     <div className="stats-table">
                       <TableContainer>
                         <Table>
@@ -251,187 +274,37 @@ const Dashboard = () => {
                           </TableHead>
 
                           <TableBody>
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-active">Active</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-pending">Pending</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-cancelled">Cancelled</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-completed">Completed</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-active">Active</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-active">Active</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                              <TableCell>12/09/2019</TableCell>
-                              <TableCell>AB Technologies</TableCell>
-                              <TableCell>John Doe</TableCell>
-                              <TableCell>PAD</TableCell>
-                              <TableCell>99823982373</TableCell>
-                              <TableCell className="text-city">
-                                Gujarat
-                              </TableCell>
-                              <TableCell className="text-icon">
-                                <div className="btn-pending">pending</div>
-                              </TableCell>
-                              <TableCell>
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
-                              </TableCell>
-                            </TableRow>
+                            {rows.map((row, index) => (
+                              <TableRow key={index}>
+                                <TableCell scope="row">{row.date}</TableCell>
+                                <TableCell>{row.comapny}</TableCell>
+                                <TableCell>{row.name}</TableCell>
+                                <TableCell>{row.type}</TableCell>
+                                <TableCell>{row.contact}</TableCell>
+                                <TableCell className="text-city">
+                                  {row.area}
+                                </TableCell>
+                                <TableCell className="text-icon">
+                                  <span className={row.classBtn}>
+                                    {row.status}
+                                  </span>
+                                </TableCell>
+                                <TableCell>
+                                  <div className="edit-cell">
+                                    <img
+                                      className="edit-img"
+                                      src={EditIcon}
+                                      alt=""
+                                    />
+                                    <img
+                                      className="delete-img"
+                                      src={DeleteIcon}
+                                      alt=""
+                                    />
+                                  </div>
+                                </TableCell>
+                              </TableRow>
+                            ))}
                           </TableBody>
                         </Table>
                       </TableContainer>
@@ -445,10 +318,11 @@ const Dashboard = () => {
                 </div>
               </div>
             </Grid>
-            <Footer />
           </Grid>
+          <Footer />
         </div>
       </div>
+      {/* End Dashboard  */}
     </div>
     /* End Wrapper */
   );
