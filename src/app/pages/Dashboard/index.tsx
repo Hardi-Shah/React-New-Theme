@@ -11,21 +11,29 @@ import {
   MenuItem,
   FormLabel,
 } from "@material-ui/core";
+import Pagination from "@material-ui/lab/Pagination";
 import React from "react";
 import {
+  AvgSale1Icon,
   AvgSaleIcon,
   DeleteIcon,
+  Earnings1Icon,
   EarningsIcon,
   EditIcon,
+  Sales1Icon,
   SalesGraph1Icon,
   SalesGraph2Icon,
   SalesIcon,
+  ThreeDotIcon,
+  TotalLoss1Icon,
   TotalLossIcon,
+  Visitors1Icon,
   VisitorsIcon,
 } from "../../assets/images";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const [select, setSelect] = React.useState("Today");
@@ -42,7 +50,11 @@ const Dashboard = () => {
     document.getElementById("main")!.classList.toggle("main-toggle");
   }
   return (
+    /* Start Wrapper */
     <div className="wrapper">
+      <Helmet>
+        <title>Dashboard | Theme</title>
+      </Helmet>
       <div id="overlay" onClick={() => toggleOverlay()}></div>
       <Header />
       <Sidebar />
@@ -60,9 +72,9 @@ const Dashboard = () => {
                     className="select-entry"
                     onChange={handleChangeSelect}
                   >
-                    <MenuItem value={1}>Today</MenuItem>
-                    <MenuItem value={2}>Yesterday</MenuItem>
-                    <MenuItem value={3}>PreviousDay</MenuItem>
+                    <MenuItem value={"Today"}>Today</MenuItem>
+                    <MenuItem value={"Yesterday"}>Yesterday</MenuItem>
+                    <MenuItem value={"NextDay"}>NextDay</MenuItem>
                   </Select>
                 </FormControl>
               </span>
@@ -71,24 +83,20 @@ const Dashboard = () => {
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
-                    <Grid container>
-                      <Grid item xs={4} className="stats-icon">
-                        <img
-                          src={VisitorsIcon}
-                          alt="visitors"
-                          className="stats-img"
-                        />
-                      </Grid>
-                      <Grid item xs={8}>
-                        <div className="visitors-number">120,570</div>
-                      </Grid>
-                    </Grid>
-
-                    <Grid container className="">
-                      <Grid item className=" col-12  ">
-                        <span className="visitors-text">Visitors</span>
-                      </Grid>
-                    </Grid>
+                    <img
+                      src={VisitorsIcon}
+                      alt="visitors"
+                      className="stats-img"
+                    />
+                    <img
+                      src={Visitors1Icon}
+                      alt="visitors"
+                      className="stats-img-1"
+                    />
+                    <div className="visitors-div">
+                      <h3 className="visitors-number">120,570</h3>
+                      <p className="visitors-text">Visitors</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -98,23 +106,12 @@ const Dashboard = () => {
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
-                    <Grid container>
-                      <Grid item xs={5} className="stats-icon">
-                        <img
-                          src={SalesIcon}
-                          alt="total-pending"
-                          className="stats-img"
-                        />
-                      </Grid>
-                      <Grid item xs={7}>
-                        <div className="visitors-number">150</div>
-                      </Grid>
-                    </Grid>
-                    <Grid container className="">
-                      <Grid item className=" col-12  ">
-                        <span className="visitors-text">Sales</span>
-                      </Grid>
-                    </Grid>
+                    <img src={SalesIcon} alt="sales" className="stats-img" />
+                    <img src={Sales1Icon} alt="sales" className="stats-img-1" />
+                    <div className="visitors-div">
+                      <h3 className="visitors-number">150</h3>
+                      <p className="visitors-text">Sales</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -124,85 +121,81 @@ const Dashboard = () => {
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
-                    <Grid container>
-                      <Grid item xs={5} className="stats-icon">
-                        <img
-                          src={EarningsIcon}
-                          alt="earnings"
-                          className="stats-img"
-                        />
-                      </Grid>
-                      <Grid item xs={7}>
-                        <div className="visitors-number">3,200</div>
-                      </Grid>
-                    </Grid>
-                    <Grid container className="">
-                      <Grid item className=" col-12  ">
-                        <span className="visitors-text">Earnings</span>
-                      </Grid>
-                    </Grid>
+                    <img
+                      src={EarningsIcon}
+                      alt="earnings"
+                      className="stats-img"
+                    />
+                    <img
+                      src={Earnings1Icon}
+                      alt="earnings"
+                      className="stats-img-1"
+                    />
+                    <div className="visitors-div">
+                      <h3 className="visitors-number">3,200</h3>
+                      <p className="visitors-text">Earnings</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item lg={4} xs={12} sm={6} md={6} xl className="col-md-6">
+            <Grid item lg={6} xs={12} sm={6} md={6} xl className="col-md-6">
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
-                    <Grid container>
-                      <Grid item xs={5} className="stats-icon">
-                        <img
-                          src={AvgSaleIcon}
-                          alt="avg-sale"
-                          className="stats-img"
-                        />
-                      </Grid>
-                      <Grid item xs={7}>
-                        <div className="visitors-number">210</div>
-                      </Grid>
-                    </Grid>
-                    <Grid container className="">
-                      <Grid item className=" col-12  ">
-                        <span className="visitors-text">Avg Sale</span>
-                      </Grid>
-                    </Grid>
+                    <img
+                      src={AvgSaleIcon}
+                      alt="avg-sale"
+                      className="stats-img"
+                    />
+                    <img
+                      src={AvgSale1Icon}
+                      alt="avg-sale"
+                      className="stats-img-1"
+                    />
+                    <div className="visitors-div">
+                      <h3 className="visitors-number">210</h3>
+                      <p className="visitors-text">Avg Sale</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item lg={4} xs={12} sm={6} md={6} xl className="col-md-6">
+            <Grid item lg={6} xs={12} sm={12} md={12} xl className="col-md-6">
               <div className="card visitors">
                 <div className="card-body">
                   <div className="content-box">
-                    <Grid container>
-                      <Grid item xs={5} className="stats-icon">
-                        <img
-                          src={TotalLossIcon}
-                          alt="total-loss"
-                          className="stats-img"
-                        />
-                      </Grid>
-                      <Grid item xs={7}>
-                        <div className="visitors-number">20</div>
-                      </Grid>
-                    </Grid>
-                    <Grid container className="">
-                      <Grid item className=" col-12  ">
-                        <span className="visitors-text">Total Loss</span>
-                      </Grid>
-                    </Grid>
+                    <img
+                      src={TotalLossIcon}
+                      alt="total-loss"
+                      className="stats-img"
+                    />
+                    <img
+                      src={TotalLoss1Icon}
+                      alt="total-loss"
+                      className="stats-img-1"
+                    />
+                    <div className="visitors-div">
+                      <h3 className="visitors-number">20</h3>
+                      <p className="visitors-text">Total Loss</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xl={6} sm={12} className="col-md-6">
+            <Grid item xl={5} xs={12} className="col-md-6 sales-grid1">
               <div className="card sales-card-1">
                 <div className="card-body">
-                  <div className="analytics-div content-box">
+                  <div className="analytics-div ">
                     <h3>Sales</h3>
+                    <img
+                      src={ThreeDotIcon}
+                      alt="three-dot"
+                      className="dot-img"
+                    />
                     <div className="analytics-image">
                       <img
                         className="analytic-img"
@@ -215,11 +208,16 @@ const Dashboard = () => {
               </div>
             </Grid>
 
-            <Grid item xl={6} sm={12} className="col-md-6">
+            <Grid item xl={7} xs={12} className="col-md-6 sales-grid2">
               <div className="card sales-card-2">
                 <div className="card-body">
-                  <div className="analytics-div content-box">
+                  <div className="analytics-div ">
                     <h3>Sales</h3>
+                    <img
+                      src={ThreeDotIcon}
+                      alt="three-dot"
+                      className="dot-img"
+                    />
                     <div className="analytics-image">
                       <img
                         className="analytic-img"
@@ -235,7 +233,7 @@ const Dashboard = () => {
             <Grid item xs={12} sm={12} md={12} className="col-md-6 col-sm-12 ">
               <div className="card analytic-card">
                 <div className="card-body">
-                  <div className="table-div content-box">
+                  <div className="table-div ">
                     <div className="stats-table">
                       <TableContainer>
                         <Table>
@@ -248,6 +246,7 @@ const Dashboard = () => {
                               <TableCell scope="col">Contact No.</TableCell>
                               <TableCell scope="col">Area</TableCell>
                               <TableCell scope="col">Status</TableCell>
+                              <TableCell scope="col"></TableCell>
                             </TableRow>
                           </TableHead>
 
@@ -271,7 +270,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -297,7 +296,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -323,7 +322,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -349,7 +348,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -375,7 +374,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -401,7 +400,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -427,7 +426,7 @@ const Dashboard = () => {
                                   alt=""
                                 />
                                 <img
-                                  className="edit-img"
+                                  className="delete-img"
                                   src={DeleteIcon}
                                   alt=""
                                 />
@@ -436,6 +435,11 @@ const Dashboard = () => {
                           </TableBody>
                         </Table>
                       </TableContainer>
+                      <Pagination
+                        count={5}
+                        color="primary"
+                        className="pagination-nav"
+                      />
                     </div>
                   </div>
                 </div>
@@ -446,6 +450,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    /* End Wrapper */
   );
 };
 

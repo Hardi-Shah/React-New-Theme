@@ -2,11 +2,15 @@ import { FormGroup, Grid, TextField } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import { Logo } from "../../assets/images";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   return (
     /* Start Main */
     <main className="main-content">
+      <Helmet>
+        <title>Login | Theme</title>
+      </Helmet>
       <div className="login-container">
         <div className="login-left">
           <div className="login-header">

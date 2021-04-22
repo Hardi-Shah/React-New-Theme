@@ -5,7 +5,6 @@ import {
   Logo,
   LogoIcon,
   UserProfileIcon,
-  NotificationIcon,
   User1Icon,
   User2Icon,
   User3Icon,
@@ -17,6 +16,7 @@ import {
   UserProfile,
   DropdownIcon,
   NavigationButtonIcon,
+  NotificationGreyButtonIcon,
 } from "../../assets/images";
 
 const Header = () => {
@@ -68,7 +68,7 @@ const Header = () => {
             onClick={handleClick}
           >
             <img
-              src={NotificationIcon}
+              src={NotificationGreyButtonIcon}
               alt="notification"
               className="bell-logo"
             />
