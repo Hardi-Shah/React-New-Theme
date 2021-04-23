@@ -39,17 +39,13 @@ const Header = () => {
   const handleUserClose = () => {
     setUser(null);
   };
-
-  function toggleNav() {
-    document.getElementById("Sidebar")!.classList.toggle("sidenav-toggle");
-    document.getElementById("main")!.classList.toggle("main-toggle");
-    document
-      .getElementById("overlay")!
-      .classList.toggle("display-block-toggle");
-  }
+  const toggleNav = () => {
+    document.body.classList.toggle("toggle-nav");
+  };
+ 
   return (
     /* Start Header */
-    <nav className="navbar navbar-expand navbar-light fixed-top">
+    <nav className="navbar navbar-expand fixed-top">
       <div className="horizontal-logo-div">
         <img src={Logo} alt="logo" className="horizontal-logo" />
       </div>
@@ -153,7 +149,7 @@ const Header = () => {
             />
           </li>
           <li className="nav-item nav-item-mobile">
-            <div className="founder-name"> Hello John</div>
+            <div className="founder-name" onClick={handleUserClick}> Hello John</div>
             <span className="founder">
               <img
                 src={DropdownIcon}
@@ -220,7 +216,6 @@ const Header = () => {
       </div>
     </nav>
     /* End Header */
-
   );
 };
 

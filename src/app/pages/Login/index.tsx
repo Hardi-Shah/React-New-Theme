@@ -36,6 +36,8 @@ const Login = () => {
                   variant="contained"
                   color="primary"
                   className="btn-login"
+                  component={Link}
+                  to='/dashboard'
                 >
                   Login
                 </Button>

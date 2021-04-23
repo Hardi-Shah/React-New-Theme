@@ -12,7 +12,7 @@ import {
 const Sidebar = () => {
   return (
       /* Start Sidebar */
-    <div id="Sidebar" className="sidenav">
+    <div id="Sidebar" className="sidenav sidenav-toggle">
       <div className="sidebar-list">
         <Link to="/dashboard">
           <div className="row">
