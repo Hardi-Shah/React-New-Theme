@@ -270,7 +270,7 @@ const InnerPage = () => {
                   <Grid container>
                     <Grid item md={12} className="col-12">
                       <h3 className="one-column-head">One Column</h3>
-                      <Divider className='divider-one'/>
+                      <Divider className="divider-one" />
                     </Grid>
                     <Grid item md={12} className="col-12">
                       <FormGroup>
@@ -301,7 +301,7 @@ const InnerPage = () => {
                   <Grid container>
                     <Grid item xs={12} className="col-12">
                       <h3 className="two-column-head">Two Column</h3>
-                      <Divider className='divider-two'/>
+                      <Divider className="divider-two" />
                     </Grid>
                     <Grid item md={6} className="col-md-6">
                       <FormGroup>
@@ -349,7 +349,7 @@ const InnerPage = () => {
                   <Grid container>
                     <Grid item xs={12} className="col-12">
                       <h3 className="three-column-head">Three Column</h3>
-                      <Divider className='divider-three'/>
+                      <Divider className="divider-three" />
                     </Grid>
                     <Grid item md={4} className="col-md-4">
                       <FormGroup>
@@ -400,7 +400,7 @@ const InnerPage = () => {
                   <Grid container>
                     <Grid item xs={12} className="col-12">
                       <h3 className="four-column-head">Four Column</h3>
-                      <Divider className='divider-four'/>
+                      <Divider className="divider-four" />
                     </Grid>
                     <Grid item md={3} className="col-md-3">
                       <FormGroup>
@@ -465,7 +465,7 @@ const InnerPage = () => {
                   <Grid container>
                     <Grid item md={12} className="col-md-12">
                       <h3 className="element-head">Other Elements</h3>
-                      <Divider className='divider-element'/>
+                      <Divider className="divider-element" />
                     </Grid>
 
                     <Grid item md={12} className="col-md-12">
@@ -497,7 +497,7 @@ const InnerPage = () => {
                       </FormGroup>
                     </Grid>
 
-                    <Grid item xs={12} className="col-md-12">
+                    <Grid item md={12} className="col-md-12">
                       <FormGroup>
                         <div className="custom-Control custom-checkbox checkbox1">
                           <FormControlLabel
@@ -747,7 +747,7 @@ const InnerPage = () => {
                 <Grid container>
                   <Grid item xs={12}>
                     <h3 className="tab-head">Tab Style</h3>
-                    <Divider className='tab-divider'/>
+                    <Divider className="tab-divider" />
                   </Grid>
                   <Grid item xs={12}>
                     <DefaultTabs />
