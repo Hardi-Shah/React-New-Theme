@@ -42,14 +42,6 @@ const Dashboard = () => {
     setSelect(event.target.value as string);
   };
 
-  // function toggleOverlay() {
-  //   document
-  //     .getElementById("overlay")!
-  //     .classList.toggle("display-block-toggle");
-  //   document.getElementById("Sidebar")!.classList.toggle("sidenav-toggle");
-  //   document.getElementById("main")!.classList.toggle("main-toggle");
-  // }
-
   function createData(
     date: string,
     comapny: string,
