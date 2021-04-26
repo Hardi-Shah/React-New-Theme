@@ -136,7 +136,11 @@ const Dashboard = () => {
       <Helmet>
         <title>Dashboard | Theme</title>
       </Helmet>
-      <div id="overlay" className="display-block-toggle" onClick={() => toggleOverlay()}></div>
+      <div
+        id="overlay"
+        className="display-block-toggle"
+        onClick={() => toggleOverlay()}
+      ></div>
       <Header />
       <Sidebar />
       {/* Start Dashboard  */}
@@ -144,7 +148,6 @@ const Dashboard = () => {
         <div className="dashboard-content">
           <Grid container spacing={4} className="admin-content">
             <Grid item xs={12} className="dashboard-sort">
-              <div >
               <h3 className="dashboard-header">Dashboard</h3>
               <span className="select-div">
                 <FormLabel>Sort by</FormLabel>
@@ -162,7 +165,6 @@ const Dashboard = () => {
                   </Select>
                 </FormControl>
               </span>
-              </div>
             </Grid>
             <Grid item xs={12} lg={4} sm={6} md={6} xl>
               <div className="card visitors">
