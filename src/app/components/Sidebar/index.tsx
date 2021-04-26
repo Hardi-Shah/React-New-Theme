@@ -26,7 +26,7 @@ const Sidebar = () => {
             <div className="col-10">Dashboard</div>
           </div>
         </Link>
-        <Link to="/innerpage">
+        <Link to="#">
           <div className="row">
             <div className="col-2">
               <img src={AdminIcon} alt="admin" className="sidebar-logo" />
@@ -34,7 +34,7 @@ const Sidebar = () => {
             <div className="col-10">Admin</div>
           </div>
         </Link>
-        <Link to="#">
+        <Link to="/innerpage">
           <div className="row">
             <div className="col-2">
               <img

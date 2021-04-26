@@ -165,6 +165,7 @@ const InnerPage = () => {
       ></div>
       <Header />
       <Sidebar />
+      {/* Start InnerPage*/}
       <div id="main" className="main-toggle">
         <div className="innerpage-content">
           <Grid container>
@@ -266,483 +267,478 @@ const InnerPage = () => {
                 <div className="analytics-text">
                   <h3>Form Styles</h3>
                 </div>
-                <form>
-                  <Grid container>
-                    <Grid item md={12} className="col-12">
-                      <h3 className="one-column-head">One Column</h3>
-                      <Divider className="divider-one" />
-                    </Grid>
-                    <Grid item md={12} className="col-12">
-                      <FormGroup>
-                        <TextField
-                          type="text"
-                          variant="filled"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                      <FormGroup>
-                        <TextField
-                          className="form-textarea"
-                          id="exampleTextarea"
-                          type="textarea"
-                          label="Textarea"
-                          variant="filled"
-                        ></TextField>
-                      </FormGroup>
-                    </Grid>
+
+                <Grid container>
+                  <Grid item md={12} className="col-12">
+                    <h3 className="one-column-head">One Column</h3>
+                    <Divider className="divider-one" />
                   </Grid>
-                </form>
-
-                <form>
-                  <Grid container>
-                    <Grid item xs={12} className="col-12">
-                      <h3 className="two-column-head">Two Column</h3>
-                      <Divider className="divider-two" />
-                    </Grid>
-                    <Grid item md={6} className="col-md-6">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          label="Disabled"
-                          id="exampleInput"
-                          disabled
-                        />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={6} className="col-md-6">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Focus"
-                        />
-                      </FormGroup>
-                    </Grid>
+                  <Grid item md={12} className="col-12">
+                    <FormGroup>
+                      <TextField
+                        type="text"
+                        variant="filled"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                    <FormGroup>
+                      <TextField
+                        className="form-textarea"
+                        id="exampleTextarea"
+                        type="textarea"
+                        label="Textarea"
+                        variant="filled"
+                      ></TextField>
+                    </FormGroup>
                   </Grid>
-                </form>
+                </Grid>
 
-                <form>
-                  <Grid container>
-                    <Grid item xs={12} className="col-12">
-                      <h3 className="three-column-head">Three Column</h3>
-                      <Divider className="divider-three" />
-                    </Grid>
-                    <Grid item md={4} className="col-md-4">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={4} className="col-md-4">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={4} className="col-md-4">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
+                <Grid container>
+                  <Grid item xs={12} className="col-12">
+                    <h3 className="two-column-head">Two Column</h3>
+                    <Divider className="divider-two" />
                   </Grid>
-                </form>
+                  <Grid item md={6} className="col-md-6">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
 
-                <form>
-                  <Grid container>
-                    <Grid item xs={12} className="col-12">
-                      <h3 className="four-column-head">Four Column</h3>
-                      <Divider className="divider-four" />
-                    </Grid>
-                    <Grid item md={3} className="col-md-3">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={3} className="col-md-3">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={3} className="col-md-3">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
-                    <Grid item md={3} className="col-md-3">
-                      <FormGroup>
-                        <TextField
-                          variant="filled"
-                          type="text"
-                          id="exampleInput"
-                          label="Textbox"
-                        />
-                      </FormGroup>
-
-                      <FormGroup>
-                        <DefaultSelect />
-                      </FormGroup>
-                    </Grid>
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        label="Disabled"
+                        id="exampleInput"
+                        disabled
+                      />
+                    </FormGroup>
                   </Grid>
-                </form>
+                  <Grid item md={6} className="col-md-6">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
 
-                <form>
-                  <Grid container>
-                    <Grid item md={12} className="col-md-12">
-                      <h3 className="element-head">Other Elements</h3>
-                      <Divider className="divider-element" />
-                    </Grid>
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Focus"
+                      />
+                    </FormGroup>
+                  </Grid>
+                </Grid>
 
-                    <Grid item md={12} className="col-md-12">
-                      <div className="file-upload">
-                        <span className="form-label one-column-label">
-                          File Upload:
-                        </span>
+                <Grid container>
+                  <Grid item xs={12} className="col-12">
+                    <h3 className="three-column-head">Three Column</h3>
+                    <Divider className="divider-three" />
+                  </Grid>
+                  <Grid item md={4} className="col-md-4">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
 
-                        <FormLabel htmlFor="input-file">
-                          <img
-                            src={FileUploadIcon}
-                            alt=""
-                            className="upload-white-icon"
-                          />{" "}
-                          Upload
-                        </FormLabel>
-                        <TextField id="input-file" type="file" />
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                  <Grid item md={4} className="col-md-4">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                  <Grid item md={4} className="col-md-4">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                </Grid>
+
+                <Grid container>
+                  <Grid item xs={12} className="col-12">
+                    <h3 className="four-column-head">Four Column</h3>
+                    <Divider className="divider-four" />
+                  </Grid>
+                  <Grid item md={3} className="col-md-3">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                  <Grid item md={3} className="col-md-3">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                  <Grid item md={3} className="col-md-3">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                  <Grid item md={3} className="col-md-3">
+                    <FormGroup>
+                      <TextField
+                        variant="filled"
+                        type="text"
+                        id="exampleInput"
+                        label="Textbox"
+                      />
+                    </FormGroup>
+
+                    <FormGroup>
+                      <DefaultSelect />
+                    </FormGroup>
+                  </Grid>
+                </Grid>
+
+                <Grid container>
+                  <Grid item md={12} className="col-md-12">
+                    <h3 className="element-head">Other Elements</h3>
+                    <Divider className="divider-element" />
+                  </Grid>
+
+                  <Grid item md={12} className="col-md-12">
+                    <div className="file-upload">
+                      <span className="form-label one-column-label">
+                        File Upload:
+                      </span>
+
+                      <FormLabel htmlFor="input-file">
+                        <img
+                          src={FileUploadIcon}
+                          alt=""
+                          className="upload-white-icon"
+                        />{" "}
+                        Upload
+                      </FormLabel>
+                      <TextField id="input-file" type="file" />
+                    </div>
+                  </Grid>
+
+                  <Grid item md={12} className="col-md-12">
+                    <FormGroup>
+                      <FormLabel
+                        className="checkbox-label"
+                        htmlFor="exampleInput"
+                      >
+                        Check Boxes
+                      </FormLabel>
+                    </FormGroup>
+                  </Grid>
+
+                  <Grid item md={12} className="col-md-12">
+                    <FormGroup>
+                      <div className="custom-Control custom-checkbox checkbox1">
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              checked={checked}
+                              color="primary"
+                              disableRipple={true}
+                              onChange={handleChangeCheckbox}
+                            />
+                          }
+                          label="Option 1"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              defaultChecked
+                              color="primary"
+                              disableRipple={true}
+                            />
+                          }
+                          label="Option 2"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              defaultChecked
+                              color="primary"
+                              disableRipple={true}
+                            />
+                          }
+                          label="Option 3"
+                        />
                       </div>
-                    </Grid>
+                    </FormGroup>
+                  </Grid>
 
-                    <Grid item md={12} className="col-md-12">
-                      <FormGroup>
-                        <FormLabel
-                          className="checkbox-label"
-                          htmlFor="exampleInput"
-                        >
-                          Check Boxes
-                        </FormLabel>
-                      </FormGroup>
-                    </Grid>
+                  <Grid item xs={12} className="col-md-12">
+                    <FormGroup>
+                      <FormLabel
+                        className="checkbox-label"
+                        htmlFor="exampleInput"
+                      >
+                        Radio Buttons
+                      </FormLabel>
+                    </FormGroup>
+                  </Grid>
 
-                    <Grid item md={12} className="col-md-12">
-                      <FormGroup>
-                        <div className="custom-Control custom-checkbox checkbox1">
-                          <FormControlLabel
-                            control={
-                              <Checkbox
-                                checked={checked}
-                                color="primary"
-                                disableRipple={true}
-                                onChange={handleChangeCheckbox}
-                              />
-                            }
-                            label="Option 1"
-                          />
-                          <FormControlLabel
-                            control={
-                              <Checkbox
-                                defaultChecked
-                                color="primary"
-                                disableRipple={true}
-                              />
-                            }
-                            label="Option 2"
-                          />
-                          <FormControlLabel
-                            control={
-                              <Checkbox
-                                defaultChecked
-                                color="primary"
-                                disableRipple={true}
-                              />
-                            }
-                            label="Option 3"
-                          />
-                        </div>
-                      </FormGroup>
-                    </Grid>
-
-                    <Grid item xs={12} className="col-md-12">
-                      <FormGroup>
-                        <FormLabel
-                          className="checkbox-label"
-                          htmlFor="exampleInput"
-                        >
-                          Radio Buttons
-                        </FormLabel>
-                      </FormGroup>
-                    </Grid>
-
-                    <Grid item md={12} className="col-md-12">
-                      <FormGroup>
-                        <div className="custom-Control custom-radio checkbox1">
-                          <FormControlLabel
-                            value="option1"
-                            control={
-                              <Radio
-                                onChange={handleChangeRadio}
-                                color="primary"
-                                name="option"
-                                disableRipple={true}
-                                checked={radio === "option1"}
-                              />
-                            }
-                            label="Option 1"
-                          />
-                          <FormControlLabel
-                            value="option2"
-                            control={
-                              <Radio
-                                onChange={handleChangeRadio}
-                                color="primary"
-                                checked={radio === "option2"}
-                                name="option"
-                                disableRipple={true}
-                              />
-                            }
-                            label="Option 2"
-                          />
-                          <FormControlLabel
-                            value="option3"
-                            control={
-                              <Radio
-                                onChange={handleChangeRadio}
-                                checked={radio === "option3"}
-                                color="primary"
-                                disableRipple={true}
-                                name="option"
-                              />
-                            }
-                            label="Option 3"
-                          />
-                        </div>
-                      </FormGroup>
-                    </Grid>
-
-                    <Grid item md={12} className="col-md-12">
-                      <div className="button-element">
-                        <Button
-                          type="button"
-                          variant="contained"
-                          color="primary"
-                          className="primary-btn"
-                        >
-                          Primary
-                        </Button>
-                        <Button
-                          type="button"
-                          variant="contained"
-                          color="default"
-                          className="secondary-btn"
-                        >
-                          Secondary
-                        </Button>
-                        <DefaultSwitch leftlabel="OFF" rightlabel="ON" />
+                  <Grid item md={12} className="col-md-12">
+                    <FormGroup>
+                      <div className="custom-Control custom-radio checkbox1">
+                        <FormControlLabel
+                          value="option1"
+                          control={
+                            <Radio
+                              onChange={handleChangeRadio}
+                              color="primary"
+                              name="option"
+                              disableRipple={true}
+                              checked={radio === "option1"}
+                            />
+                          }
+                          label="Option 1"
+                        />
+                        <FormControlLabel
+                          value="option2"
+                          control={
+                            <Radio
+                              onChange={handleChangeRadio}
+                              color="primary"
+                              checked={radio === "option2"}
+                              name="option"
+                              disableRipple={true}
+                            />
+                          }
+                          label="Option 2"
+                        />
+                        <FormControlLabel
+                          value="option3"
+                          control={
+                            <Radio
+                              onChange={handleChangeRadio}
+                              checked={radio === "option3"}
+                              color="primary"
+                              disableRipple={true}
+                              name="option"
+                            />
+                          }
+                          label="Option 3"
+                        />
                       </div>
-                    </Grid>
+                    </FormGroup>
+                  </Grid>
 
-                    <Grid item md={12} className="col-md-12">
-                      <div className="alert-message">
-                        {!showSuccess && (
-                          <div>
-                            <Button
-                              variant="contained"
-                              className="mb-2 btn-success"
-                              onClick={() => setShowSuccess(true)}
-                            >
-                              Show Success Alert
-                            </Button>
-                          </div>
-                        )}
-                        {showSuccess && (
-                          <Alert icon={false} className="alert-success">
-                            <img
-                              className="alert-icon"
-                              src={AlertSuccessIcon}
-                              alt=""
-                            />
-                            <span className="alert-success-text">
-                              This is a success message
-                            </span>
-                            <img
-                              className="alert-close"
-                              src={AlertCloseIcon}
-                              onClick={() => setShowSuccess(false)}
-                              alt=""
-                            />
-                          </Alert>
-                        )}
+                  <Grid item md={12} className="col-md-12">
+                    <div className="button-element">
+                      <Button
+                        type="button"
+                        variant="contained"
+                        color="primary"
+                        className="primary-btn"
+                      >
+                        Primary
+                      </Button>
+                      <Button
+                        type="button"
+                        variant="contained"
+                        color="default"
+                        className="secondary-btn"
+                      >
+                        Secondary
+                      </Button>
+                    </div>
+                    <DefaultSwitch
+                      leftlabel="OFF"
+                      rightlabel="ON"
+                      className="switch-default"
+                    />
+                  </Grid>
 
-                        {!showInfo && (
-                          <div>
-                            <Button
-                              variant="contained"
-                              className="btn-info mb-2"
-                              onClick={() => setShowInfo(true)}
-                            >
-                              Show Info Alert
-                            </Button>
-                          </div>
-                        )}
-                        {showInfo && (
-                          <Alert icon={false} className="alert alert-info">
-                            <img
-                              className="alert-icon"
-                              src={AlertInfoIcon}
-                              alt=""
-                            />
-                            <span className="alert-info-text">
-                              This is an info message
-                            </span>
-                            <img
-                              className="alert-close"
-                              src={AlertCloseIcon}
-                              alt=""
-                              onClick={() => setShowInfo(false)}
-                            />
-                          </Alert>
-                        )}
-
-                        {!showWarning && (
-                          <div>
-                            <Button
-                              variant="contained"
-                              className=" btn-warning mb-2"
-                              onClick={() => setShowWarning(true)}
-                            >
-                              Show Warning Alert
-                            </Button>
-                          </div>
-                        )}
-                        {showWarning && (
-                          <Alert icon={false} className="alert alert-warning">
-                            <img
-                              className="alert-icon"
-                              src={AlertWarnIcon}
-                              alt=""
-                            />
-                            <span className="alert-warn-text">
-                              This is an alert message
-                            </span>
-                            <img
-                              className="alert-close"
-                              src={AlertCloseIcon}
-                              alt=""
-                              onClick={() => setShowWarning(false)}
-                            />
-                          </Alert>
-                        )}
-
-                        {!showDanger && (
-                          <div>
-                            <Button
-                              variant="contained"
-                              className="btn-danger mb-2"
-                              onClick={() => setShowDanger(true)}
-                            >
-                              Show Danger Alert
-                            </Button>
-                          </div>
-                        )}
-                        {showDanger && (
-                          <Alert
-                            icon={false}
-                            className="alert alert-danger"
-                            role="alert"
+                  <Grid item md={12} className="col-md-12">
+                    <div className="alert-message">
+                      {!showSuccess && (
+                        <div>
+                          <Button
+                            variant="contained"
+                            className="mb-2 btn-success"
+                            onClick={() => setShowSuccess(true)}
                           >
-                            <img
-                              className="alert-icon"
-                              src={AlertDangerIcon}
-                              alt=""
-                            />
-                            <span className="alert-danger-text">
-                              This is an error message
-                            </span>
-                            <img
-                              className="alert-close"
-                              src={AlertCloseIcon}
-                              alt=""
-                              onClick={() => setShowDanger(false)}
-                            />
-                          </Alert>
-                        )}
-                      </div>
-                    </Grid>
+                            Show Success Alert
+                          </Button>
+                        </div>
+                      )}
+                      {showSuccess && (
+                        <Alert icon={false} className="alert-success">
+                          <img
+                            className="alert-icon"
+                            src={AlertSuccessIcon}
+                            alt=""
+                          />
+                          <span className="alert-success-text">
+                            This is a success message
+                          </span>
+                          <img
+                            className="alert-close"
+                            src={AlertCloseIcon}
+                            onClick={() => setShowSuccess(false)}
+                            alt=""
+                          />
+                        </Alert>
+                      )}
+
+                      {!showInfo && (
+                        <div>
+                          <Button
+                            variant="contained"
+                            className="btn-info mb-2"
+                            onClick={() => setShowInfo(true)}
+                          >
+                            Show Info Alert
+                          </Button>
+                        </div>
+                      )}
+                      {showInfo && (
+                        <Alert icon={false} className="alert alert-info">
+                          <img
+                            className="alert-icon"
+                            src={AlertInfoIcon}
+                            alt=""
+                          />
+                          <span className="alert-info-text">
+                            This is an info message
+                          </span>
+                          <img
+                            className="alert-close"
+                            src={AlertCloseIcon}
+                            alt=""
+                            onClick={() => setShowInfo(false)}
+                          />
+                        </Alert>
+                      )}
+
+                      {!showWarning && (
+                        <div>
+                          <Button
+                            variant="contained"
+                            className=" btn-warning mb-2"
+                            onClick={() => setShowWarning(true)}
+                          >
+                            Show Warning Alert
+                          </Button>
+                        </div>
+                      )}
+                      {showWarning && (
+                        <Alert icon={false} className="alert alert-warning">
+                          <img
+                            className="alert-icon"
+                            src={AlertWarnIcon}
+                            alt=""
+                          />
+                          <span className="alert-warn-text">
+                            This is an alert message
+                          </span>
+                          <img
+                            className="alert-close"
+                            src={AlertCloseIcon}
+                            alt=""
+                            onClick={() => setShowWarning(false)}
+                          />
+                        </Alert>
+                      )}
+
+                      {!showDanger && (
+                        <div>
+                          <Button
+                            variant="contained"
+                            className="btn-danger mb-2"
+                            onClick={() => setShowDanger(true)}
+                          >
+                            Show Danger Alert
+                          </Button>
+                        </div>
+                      )}
+                      {showDanger && (
+                        <Alert
+                          icon={false}
+                          className="alert alert-danger"
+                          role="alert"
+                        >
+                          <img
+                            className="alert-icon"
+                            src={AlertDangerIcon}
+                            alt=""
+                          />
+                          <span className="alert-danger-text">
+                            This is an error message
+                          </span>
+                          <img
+                            className="alert-close"
+                            src={AlertCloseIcon}
+                            alt=""
+                            onClick={() => setShowDanger(false)}
+                          />
+                        </Alert>
+                      )}
+                    </div>
                   </Grid>
-                </form>
+                </Grid>
 
                 <Grid container>
                   <Grid item xs={12}>
@@ -759,6 +755,7 @@ const InnerPage = () => {
           </Grid>
         </div>
       </div>
+      {/* End InnerPage */}
     </div>
   );
 };
