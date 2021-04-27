@@ -52,16 +52,23 @@ const Header = () => {
 
   return (
     /* Start Header */
-    <Navbar className="navbar navbar-expand-md  fixed-top">
-      <div className="horizontal-logo-div">
-        <img src={Logo} alt="logo" className="horizontal-logo" />
+    <Navbar className="navbar navbar-expand-md fixed-top">
+      <div className="horizontal-logo">
+        <img src={Logo} alt="logo" />
       </div>
-      <span>
-        <img src={LogoIcon} alt="logo" className="horizontal-logo-mobile" />
-      </span>
+      <img
+        src={LogoIcon}
+        alt="logo-mobile"
+        className="horizontal-logo-mobile"
+      />
 
-      <div className="navbar-brand d-flex  mr-auto">
-        <Button id="openNav" className="toggle-nav" onClick={() => toggleNav()}>
+      <div className="navbar-brand d-flex mr-auto">
+        <Button
+          id="openNav"
+          className="toggle-nav"
+          title="Menu"
+          onClick={() => toggleNav()}
+        >
           <img src={NavigationButtonIcon} alt="toggle" className="menu-logo" />
         </Button>
       </div>
@@ -69,12 +76,9 @@ const Header = () => {
         id="notification-icon"
         className="bell-icon"
         onClick={handleClick}
+        title="Notification"
       >
-        <img
-          src={NotificationGreyButtonIcon}
-          alt="notification"
-          className="bell-logo"
-        />
+        <img src={NotificationGreyButtonIcon} alt="notification" />
       </Button>
 
       <Menu
@@ -88,12 +92,10 @@ const Header = () => {
 
         <ListItem alignItems="flex-start" className="notification-link">
           <Link className="notification-dropdown" to="#">
-            <img alt="user-01" className="founder-logo" src={User1Icon} />
-            <ListItemText>
-              <div className="notification-message">
-                Suzzeth Bungaos tagged you and 18 others in a post
-              </div>
-              <div className="notification-time">Oct 3, 2017 9:00 PM</div>
+            <img alt="" className="user-icon" src={User1Icon} />
+            <ListItemText className="notification-content">
+              <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+              <span>Oct 3, 2017 9:00 PM</span>
             </ListItemText>
           </Link>
         </ListItem>
@@ -101,12 +103,10 @@ const Header = () => {
 
         <ListItem alignItems="flex-start" className="notification-link">
           <Link className="notification-dropdown" to="#">
-            <img alt="user-02" className="founder-logo" src={User2Icon} />
-            <ListItemText>
-              <div className="notification-message">
-                Suzzeth Bungaos tagged you and 18 others in a post
-              </div>
-              <div className="notification-time">Oct 3, 2017 9:00 PM</div>
+            <img alt="" className="user-icon" src={User2Icon} />
+            <ListItemText className="notification-content">
+              <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+              <span>Oct 3, 2017 9:00 PM</span>
             </ListItemText>
           </Link>
         </ListItem>
@@ -114,38 +114,30 @@ const Header = () => {
 
         <ListItem alignItems="flex-start" className="notification-link">
           <Link className="notification-dropdown" to="#">
-            <img alt="user-03" className="founder-logo" src={User3Icon} />
-            <ListItemText>
-              <div className="notification-message">
-                Suzzeth Bungaos tagged you and 18 others in a post
-              </div>
-              <div className="notification-time">Oct 3, 2017 9:00 PM</div>
+            <img alt="" className="user-icon" src={User3Icon} />
+            <ListItemText className="notification-content">
+              <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+              <span>Oct 3, 2017 9:00 PM</span>
             </ListItemText>
           </Link>
         </ListItem>
         <Divider component="li" />
         <ListItem alignItems="flex-start" className="notification-link">
           <Link className="notification-dropdown" to="#">
-            <img alt="user-04" className="founder-logo" src={User4Icon} />
-            <ListItemText>
-              <div className="notification-message">
-                Suzzeth Bungaos tagged you and 18 others in a post
-              </div>
-              <div className="notification-time">Oct 3, 2017 9:00 PM</div>
+            <img alt="" className="user-icon" src={User4Icon} />
+            <ListItemText className="notification-content">
+              <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+              <span>Oct 3, 2017 9:00 PM</span>
             </ListItemText>
           </Link>
         </ListItem>
         <Divider component="li" />
 
         <div className="view-all">
-          Show All
-          <span>
-            <img
-              src={FormDropdownArrowIcon}
-              alt="dropdown"
-              className="chevron-down-logo"
-            />
-          </span>
+          <Button className="show-btn" title="Show All">
+            Show All
+            <img src={FormDropdownArrowIcon} alt="dropdown-icon" />
+          </Button>
         </div>
       </Menu>
       <Button className="user-dropdown" onClick={handleUserClick}>
@@ -158,12 +150,7 @@ const Header = () => {
         </div>
         <div className="founder-name nav-item-mobile">
           Hello John
-          <img
-            src={DropdownIcon}
-            alt="dropdown"
-            onClick={handleUserClick}
-            className="dropdown-arrow"
-          />
+          <img src={DropdownIcon} alt="dropdown" onClick={handleUserClick} />
         </div>
       </Button>
 

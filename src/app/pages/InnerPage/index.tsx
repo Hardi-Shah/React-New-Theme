@@ -38,7 +38,6 @@ import DefaultSwitch from "../../components/Switch";
 import DefaultTabs from "../../components/Tabs";
 import DefaultSelect from "../../components/Select";
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
 
 const InnerPage = () => {
   function createData(
@@ -173,9 +172,9 @@ const InnerPage = () => {
           <div className="innerpage-table-div card">
             <div className="table-text">
               <h3>Sales</h3>
-              <Link to="#" title="Add sales">
+              <Button className="add-icon">
                 <img src={AddIcon} alt="add"></img>
-              </Link>
+              </Button>
             </div>
             <div className="stats-table">
               <TableContainer>
@@ -207,12 +206,20 @@ const InnerPage = () => {
                         </TableCell>
                         <TableCell>
                           <div className="edit-cell">
-                            <img className="edit-img" src={EditIcon} alt="" />
-                            <img
-                              className="delete-img"
-                              src={DeleteIcon}
-                              alt=""
-                            />
+                            <Button className="action-btn">
+                              <img
+                                className="edit-icon"
+                                src={EditIcon}
+                                alt=""
+                              />
+                            </Button>
+                            <Button className="action-btn">
+                              <img
+                                className="delete-icon"
+                                src={DeleteIcon}
+                                alt=""
+                              />
+                            </Button>
                           </div>
                         </TableCell>
                       </TableRow>
@@ -222,10 +229,9 @@ const InnerPage = () => {
               </TableContainer>
               <div className="main-pagination">
                 <div className="records-entry">
-                  <span>
-                    <h2 className="pt-3">Show:</h2>
-                  </span>
-                  <span className="select-box">
+                  <h2 className="pt-3">Show:</h2>
+
+                  <div className="select-box">
                     <FormControl variant="filled">
                       <Select
                         id="entry"
@@ -238,10 +244,9 @@ const InnerPage = () => {
                         <MenuItem value={6}>6</MenuItem>
                       </Select>
                     </FormControl>
-                  </span>
-                  <span>
-                    <h3 className="pt-3">Entries</h3>
-                  </span>
+                  </div>
+
+                  <h3 className="pt-3">Entries</h3>
                 </div>
 
                 <Pagination
@@ -254,7 +259,7 @@ const InnerPage = () => {
           </div>
 
           <div className="form-div card">
-            <div className="analytics-text">
+            <div className="form-text">
               <h3>Form Styles</h3>
             </div>
 
@@ -311,9 +316,8 @@ const InnerPage = () => {
                   <TextField
                     variant="filled"
                     type="text"
-                    label="Disabled"
                     id="exampleInput"
-                    disabled
+                    label="Textbox"
                   />
                 </FormGroup>
               </Grid>
@@ -323,8 +327,9 @@ const InnerPage = () => {
                   <TextField
                     variant="filled"
                     type="text"
+                    label="Disabled"
                     id="exampleInput"
-                    label="Textbox"
+                    disabled
                   />
                 </FormGroup>
               </Grid>
@@ -358,7 +363,12 @@ const InnerPage = () => {
 
               <Grid item xs={12} sm={12} md={6} lg={4}>
                 <FormGroup>
-                  <DefaultSelect />
+                  <TextField
+                    variant="filled"
+                    type="text"
+                    id="exampleInput"
+                    label="Textbox"
+                  />
                 </FormGroup>
               </Grid>
 
@@ -381,14 +391,10 @@ const InnerPage = () => {
 
               <Grid item xs={12} sm={12} md={6} lg={4}>
                 <FormGroup>
-                  <TextField
-                    variant="filled"
-                    type="text"
-                    id="exampleInput"
-                    label="Textbox"
-                  />
+                  <DefaultSelect />
                 </FormGroup>
               </Grid>
+
               <Grid item xs={12} sm={12} md={6} lg={4}>
                 <FormGroup>
                   <DefaultSelect />
@@ -412,7 +418,23 @@ const InnerPage = () => {
 
               <Grid item xs={12} sm={12} md={6} lg={3}>
                 <FormGroup>
-                  <DefaultSelect />
+                  <TextField
+                    variant="filled"
+                    type="text"
+                    id="exampleInput"
+                    label="Textbox"
+                  />
+                </FormGroup>
+              </Grid>
+
+              <Grid item xs={12} sm={12} md={6} lg={3}>
+                <FormGroup>
+                  <TextField
+                    variant="filled"
+                    type="text"
+                    id="exampleInput"
+                    label="Textbox"
+                  />
                 </FormGroup>
               </Grid>
 
@@ -435,29 +457,13 @@ const InnerPage = () => {
 
               <Grid item xs={12} sm={12} md={6} lg={3}>
                 <FormGroup>
-                  <TextField
-                    variant="filled"
-                    type="text"
-                    id="exampleInput"
-                    label="Textbox"
-                  />
-                </FormGroup>
-              </Grid>
-
-              <Grid item xs={12} sm={12} md={6} lg={3}>
-                <FormGroup>
                   <DefaultSelect />
                 </FormGroup>
               </Grid>
 
               <Grid item xs={12} sm={12} md={6} lg={3}>
                 <FormGroup>
-                  <TextField
-                    variant="filled"
-                    type="text"
-                    id="exampleInput"
-                    label="Textbox"
-                  />
+                  <DefaultSelect />
                 </FormGroup>
               </Grid>
 
@@ -472,7 +478,7 @@ const InnerPage = () => {
             <Divider className="divider-element" />
 
             <div className="file-upload">
-              <span className="form-label one-column-label">File Upload:</span>
+              <span>File Upload:</span>
 
               <FormLabel htmlFor="input-file">
                 <img
@@ -493,7 +499,7 @@ const InnerPage = () => {
               </FormGroup>
 
               <FormGroup>
-                <div className="custom-Control custom-checkbox checkbox1">
+                <div className="custom-Control custom-checkbox custom-elements">
                   <FormControlLabel
                     control={
                       <Checkbox
@@ -537,7 +543,7 @@ const InnerPage = () => {
               </FormGroup>
 
               <FormGroup>
-                <div className="custom-Control custom-radio checkbox1">
+                <div className="custom-Control custom-radio custom-elements">
                   <FormControlLabel
                     value="option1"
                     control={
@@ -587,6 +593,7 @@ const InnerPage = () => {
                 variant="contained"
                 color="primary"
                 className="primary-btn"
+                disableElevation={true}
               >
                 Primary
               </Button>
@@ -595,15 +602,16 @@ const InnerPage = () => {
                 variant="contained"
                 color="default"
                 className="secondary-btn"
+                disableElevation={true}
               >
                 Secondary
               </Button>
+              <DefaultSwitch
+                leftlabel="OFF"
+                rightlabel="ON"
+                className="switch-default"
+              />
             </div>
-            <DefaultSwitch
-              leftlabel="OFF"
-              rightlabel="ON"
-              className="switch-default"
-            />
 
             <div className="alert-message">
               {!showSuccess && (

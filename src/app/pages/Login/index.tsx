@@ -15,7 +15,7 @@ const Login = () => {
         <div className="login-left">
           <div className="login-header">
             <Link to="#" title="logo">
-              <img src={Logo} alt="logo" className="logo" />
+              <img src={Logo} alt="Logo"/>
             </Link>
           </div>
 
@@ -49,12 +49,12 @@ const Login = () => {
             </Grid>
             <div className="signup-account">
               Don't have an account?
-              <Link to="#" title="sign-up">
+              <Link to="#" title="sign up">
                 Sign Up
               </Link>
             </div>
           </div>
-          <div className="dashboard-copyright">
+          <div className="login-footer">
             &copy; 2021 Company.All rights reserved.
           </div>
         </div>

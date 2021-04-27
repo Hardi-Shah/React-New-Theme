@@ -23,7 +23,7 @@ const TabPanel: React.FC<ITabPanelProps> = ({
       {...other}
     >
       {value === index && (
-          <Typography>{children}</Typography>
+        <Typography className="tab-details">{children}</Typography>
       )}
     </div>
   );
@@ -52,12 +52,12 @@ const DefaultTabs = () => {
         scrollButtons="auto"
       >
         <Tab label="Maintenance1" {...a11yProps(0)} disableRipple={true} />
-        <Tab label="Maintenance2" {...a11yProps(1)} disableRipple={true}/>
-        <Tab label="Maintenance3" {...a11yProps(2)} disableRipple={true}/>
-        <Tab label="Maintenance4" {...a11yProps(3)} disableRipple={true}/>
+        <Tab label="Maintenance2" {...a11yProps(1)} disableRipple={true} />
+        <Tab label="Maintenance3" {...a11yProps(2)} disableRipple={true} />
+        <Tab label="Maintenance4" {...a11yProps(3)} disableRipple={true} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -68,7 +68,7 @@ const DefaultTabs = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -81,7 +81,7 @@ const DefaultTabs = () => {
         </p>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -92,7 +92,7 @@ const DefaultTabs = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -105,7 +105,7 @@ const DefaultTabs = () => {
         </p>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -116,7 +116,7 @@ const DefaultTabs = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -129,7 +129,7 @@ const DefaultTabs = () => {
         </p>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -140,7 +140,7 @@ const DefaultTabs = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <p className="nav-paragraph">
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

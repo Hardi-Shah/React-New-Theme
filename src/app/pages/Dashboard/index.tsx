@@ -10,6 +10,7 @@ import {
   FormControl,
   MenuItem,
   FormLabel,
+  Button,
 } from "@material-ui/core";
 import Pagination from "@material-ui/lab/Pagination";
 import React from "react";
@@ -148,8 +149,8 @@ const Dashboard = () => {
         <div className="dashboard-content">
           <Grid container spacing={4} className="admin-content">
             <Grid item xs={12} className="dashboard-sort">
-              <h3 className="dashboard-header">Dashboard</h3>
-              <span className="select-div">
+              <h3>Dashboard</h3>
+              <div className="select-div">
                 <FormLabel>Sort by</FormLabel>
                 <FormControl variant="filled">
                   <Select
@@ -164,96 +165,100 @@ const Dashboard = () => {
                     <MenuItem value="NextDay">NextDay</MenuItem>
                   </Select>
                 </FormControl>
-              </span>
+              </div>
             </Grid>
             <Grid item xs={12} lg={4} sm={6} md={6} xl>
-              <div className="card visitors">
+              <div className="card stats">
                 <div className="content-box">
                   <img
                     src={VisitorsIcon}
                     alt="visitors"
-                    className="stats-img"
+                    className="default-img"
                   />
                   <img
                     src={Visitors1Icon}
                     alt="visitors"
-                    className="stats-img-1"
+                    className="active-img"
                   />
-                  <div className="visitors-div">
-                    <div className="visitors-number">120,570</div>
-                    <div className="visitors-text">Visitors</div>
+                  <div className="stats-content">
+                    <div className="stats-number">120,570</div>
+                    <div className="stats-text">Visitors</div>
                   </div>
                 </div>
               </div>
             </Grid>
 
             <Grid item xs={12} lg={4} sm={6} md={6} xl>
-              <div className="card visitors">
+              <div className="card stats">
                 <div className="content-box">
-                  <img src={SalesIcon} alt="sales" className="stats-img" />
-                  <img src={Sales1Icon} alt="sales" className="stats-img-1" />
-                  <div className="visitors-div">
-                    <div className="visitors-number">150</div>
-                    <div className="visitors-text">Sales</div>
+                  <img src={SalesIcon} alt="sales" className="default-img" />
+                  <img src={Sales1Icon} alt="sales" className="active-img" />
+                  <div className="stats-content">
+                    <div className="stats-number">150</div>
+                    <div className="stats-text">Sales</div>
                   </div>
                 </div>
               </div>
             </Grid>
 
             <Grid item lg={4} xs={12} sm={6} md={6} xl>
-              <div className="card visitors">
+              <div className="card stats">
                 <div className="content-box">
                   <img
                     src={EarningsIcon}
                     alt="earnings"
-                    className="stats-img"
+                    className="default-img"
                   />
                   <img
                     src={Earnings1Icon}
                     alt="earnings"
-                    className="stats-img-1"
+                    className="active-img"
                   />
-                  <div className="visitors-div">
-                    <div className="visitors-number">3,200</div>
-                    <div className="visitors-text">Earnings</div>
+                  <div className="stats-content">
+                    <div className="stats-number">3,200</div>
+                    <div className="stats-text">Earnings</div>
                   </div>
                 </div>
               </div>
             </Grid>
 
             <Grid item lg={6} xs={12} sm={6} md={6} xl>
-              <div className="card visitors">
+              <div className="card stats">
                 <div className="content-box">
-                  <img src={AvgSaleIcon} alt="avg-sale" className="stats-img" />
+                  <img
+                    src={AvgSaleIcon}
+                    alt="avg-sale"
+                    className="default-img"
+                  />
                   <img
                     src={AvgSale1Icon}
                     alt="avg-sale"
-                    className="stats-img-1"
+                    className="active-img"
                   />
-                  <div className="visitors-div">
-                    <div className="visitors-number">210</div>
-                    <div className="visitors-text">Avg Sale</div>
+                  <div className="stats-content">
+                    <div className="stats-number">210</div>
+                    <div className="stats-text">Avg Sale</div>
                   </div>
                 </div>
               </div>
             </Grid>
 
             <Grid item lg={6} xs={12} sm={12} md={12} xl>
-              <div className="card visitors">
+              <div className="card stats">
                 <div className="content-box">
                   <img
                     src={TotalLossIcon}
                     alt="total-loss"
-                    className="stats-img"
+                    className="default-img"
                   />
                   <img
                     src={TotalLoss1Icon}
                     alt="total-loss"
-                    className="stats-img-1"
+                    className="active-img"
                   />
-                  <div className="visitors-div">
-                    <div className="visitors-number">20</div>
-                    <div className="visitors-text">Total Loss</div>
+                  <div className="stats-content">
+                    <div className="stats-number">20</div>
+                    <div className="stats-text">Total Loss</div>
                   </div>
                 </div>
               </div>
@@ -261,24 +266,20 @@ const Dashboard = () => {
           </Grid>
 
           <Grid container spacing={4} className="graph-content">
-            <Grid item xl={5} xs={12} className="sales-grid1">
-              <div className="card sales-card-1">
-                <div className="analytics-div">
+            <Grid item xl={5} xs={12} className="sales-grid-one">
+              <div className="card sales-card-one">
+                <div className="sales">
                   <h3>Sales</h3>
                   <img src={ThreeDotIcon} alt="three-dot" className="dot-img" />
 
-                  <img
-                    className="analytic-img"
-                    src={SalesGraph1Icon}
-                    alt="sales-graph"
-                  />
+                  <img src={SalesGraph1Icon} alt="sales-graph" />
                 </div>
               </div>
             </Grid>
 
-            <Grid item xl={7} xs={12} className="sales-grid2">
-              <div className="card sales-card-2">
-                <div className="analytics-div ">
+            <Grid item xl={7} xs={12} className="sales-grid-two">
+              <div className="card sales-card-two">
+                <div className="sales">
                   <h3>Sales</h3>
                   <img src={ThreeDotIcon} alt="three-dot" className="dot-img" />
 
@@ -294,7 +295,7 @@ const Dashboard = () => {
 
           <Grid container spacing={4}>
             <Grid item xs={12} className="table-grid">
-              <div className="card analytic-card">
+              <div className="card table-card">
                 <div className="stats-table">
                   <TableContainer>
                     <Table>
@@ -327,16 +328,20 @@ const Dashboard = () => {
                             </TableCell>
                             <TableCell>
                               <div className="edit-cell">
-                                <img
-                                  className="edit-img"
-                                  src={EditIcon}
-                                  alt=""
-                                />
-                                <img
-                                  className="delete-img"
-                                  src={DeleteIcon}
-                                  alt=""
-                                />
+                                <Button className="action-btn">
+                                  <img
+                                    className="edit-icon"
+                                    src={EditIcon}
+                                    alt=""
+                                  />
+                                </Button>
+                                <Button className="action-btn">
+                                  <img
+                                    className="delete-icon"
+                                    src={DeleteIcon}
+                                    alt=""
+                                  />
+                                </Button>
                               </div>
                             </TableCell>
                           </TableRow>
