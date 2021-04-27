@@ -203,31 +203,32 @@ option:not(:checked) { color: black; }
 .btn-primary:hover,.btn-primary:focus{background-color: #3F51B5;color: #fff;border-color: #3f51b5;}
 .btn-primary:not(:disabled):not(.disabled):active{color: #fff;background-color: #3F51B5;border-color: #3F51B5;}
 .btn-primary:not(:disabled):not(.disabled):active:focus {box-shadow: none;}
-.form-div{margin-top: 29px;margin-bottom: 45px;padding: 20px;}
+.form-div{margin-top: 29px;margin-bottom: 25px;padding: 20px;}
 .select-box{margin-top: 4px;}
 
 /* InnerPage-Form
 --------------------------------------------------------------------------------------------------------*/
 .btn:focus{box-shadow: none;}
-.one-column-head{font-size: 18px;padding:21px 0 0 10px;color: #565656;font-weight: bold;}
+.one-column-head{font-size: 18px;padding:21px 0 0;color: #565656;font-weight: bold;}
 .MuiGrid-root .MuiDivider-root{border-bottom: 1px solid #eef0f3;}
 .MuiDivider-root.divider-one{margin:9px 0 1rem 0;}
-.MuiDivider-root.divider-three,.MuiDivider-root.divider-two,.MuiDivider-root.divider-four{margin:0 0 1rem 0;}
-.MuiDivider-root.divider-element{margin:0 0 31px 0;}
-/* .MuiDivider-root.tab-divider{margin:0 16px 8px 16px;} */
-.analytics-text h3{font-size: 18px;font-weight: bold;color: #909ca8;}
+.MuiDivider-root.divider-three,.MuiDivider-root.divider-two,.MuiDivider-root.divider-four{margin:-12px 0 1rem 0;}
+.MuiDivider-root.divider-element{margin:-10px 0 31px 0;}
+.MuiDivider-root.tab-divider{margin:0 0 8px;}
+.analytics-text h3{font-size: 18px;font-weight: bold;color: #909ca8;padding: 0;}
 .one-column-label{font-size: 14px;font-weight: bold;padding-bottom: 7px;color: #909ca8;}
-.two-column-head{font-size: 18px;padding: 10px 0;color: #565656;font-weight: bold;}
-.three-column-head{font-size: 18px;color: #565656;font-weight: bold;padding: 10px 0;}
-.four-column-head{font-size: 18px;padding:10px 0;color: #565656;font-weight: bold;}
-.element-head{font-size: 18px;padding:10px 0;color: #565656;font-weight: bold;}
+.two-column-head{font-size: 18px;padding: 21px 0;color: #565656;font-weight: bold;}
+.three-column-head{font-size: 18px;color: #565656;font-weight: bold;padding: 21px 0;}
+.four-column-head{font-size: 18px;padding:21px 0;color: #565656;font-weight: bold;}
+.element-head{font-size: 18px;padding:21px 0;color: #565656;font-weight: bold;}
 .tab-head{font-size: 18px;color: #565656;font-weight: bold;padding: 10px 0;}
+.other-elements{margin-bottom: 24px;}
 .form-div .MuiFormControl-root .MuiFormLabel-root{color: #909ca8;font-size: 14px;font-weight: bold;}
 .form-div .MuiFormLabel-root.Mui-focused{color:#3f51b5;}
 .form-control:focus{border-color: #3f51b5 !important;}
 .primary-btn:hover{color: #fff;border-color:#5d6dca;background-color: #303f9f;box-shadow: none !important;}
 .primary-btn{border-radius: 4px;width: 95px;height: 38px;font-size: 14px;margin-right: 14px;background-color: #3F51B5;color: #fff;}
-.file-upload {display: flex;}
+.file-upload {display: flex;margin-bottom: 5px;}
 .file-upload .MuiInputBase-input {display: none;}
 .file-upload > label > img {padding-right: 9px;}
 .upload-white-icon{height: 15px;}
@@ -238,7 +239,6 @@ option:not(:checked) { color: black; }
 .btn-secondary:not(:disabled):not(.disabled):active {color: #212529;background-color: #b6b6b6;border-color: #b6b6b6;}
 .btn-secondary:not(:disabled):not(.disabled):active:focus {box-shadow: none;}
 .alert{margin: 19px 0;height: 50px;}
-.alert-message{margin: 10px 0;}
 .alert-icon{height:24px;}
 .alert .MuiAlert-message {padding: 0;margin: auto 0;}
 .alert .MuiSvgIcon-fontSizeSmall {color: #000;opacity: 0.5;font-size: 18px;}
@@ -296,10 +296,10 @@ option:not(:checked) { color: black; }
 .MuiTab-root .MuiTab-wrapper{text-transform: capitalize;font-size: 16px;}
 .MuiTab-root.MuiTab-textColorPrimary{color: #909ca8;}
 .MuiTab-root.MuiTab-textColorPrimary.Mui-selected{color: #0057a1;}
-.MuiTypography-body1 .nav-paragraph{margin-left: 10px;}
+.MuiTypography-body1 .nav-paragraph{margin-left: -10px;}
 .MuiPagination-root .MuiTouchRipple-root{display: none;}
 .MuiTabs-scroller .PrivateTabIndicator-colorPrimary-9{border-bottom: 1px solid #0057a0;width: 120px !important;height: 2px;margin-left: 20px;}
-.MuiTabs-scroller{margin-bottom:10px !important;}
+.MuiTabs-scroller{margin-bottom:10px !important;margin-left: -20px;}
 .primary-switch .MuiSwitch-root .MuiIconButton-root:hover{ background: none; }
 .primary-switch{position: relative;bottom: 37px;left: 230px;}
 .primary-switch span.left-label,.primary-switch span.right-label{color: #666666;}
@@ -311,6 +311,7 @@ option:not(:checked) { color: black; }
 .dashboard-copyright { color:rgba(255,255,255,0.3); font-size:13px;text-align: center;position: absolute;bottom: 0;padding-bottom: 25px;}
 .copyright {color: #909ca8;  font-size:13px;position: absolute;bottom: 0;right: 30px;}
 .copyright .footer{padding: 15px 0;}
+.innerpage-content .copyright .footer{padding: 15px 0;}
 
 /* Responsive Media Queries
 --------------------------------------------------------------------------------------------------------*/
@@ -391,6 +392,11 @@ option:not(:checked) { color: black; }
 --------------------------------------------------------------------------------------------------------*/
 .notifications .MuiMenu-paper.MuiPopover-paper {width: 285px;right: 62px;}
 .notification-dropdown .MuiTypography-root{padding: 5px 9px;}
+.navbar .toggle-nav{margin-left: 0;}
+
+/* Footer
+--------------------------------------------------------------------------------------------------------*/
+.innerpage-content .copyright .footer{padding: 9px 0;}
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
@@ -403,12 +409,13 @@ option:not(:checked) { color: black; }
 
 /* InnerPage-Form
 --------------------------------------------------------------------------------------------------------*/
-.innerpage-content{padding: 15px 0;}
+.innerpage-content{padding: 74px 15px;}
+.form-div{margin-bottom: -29px;}
 .tab-content{padding-left: 0px !important;padding-right: 0px !important;}
 .checkbox1 {display: block;align-items: center;margin-right: 10px;}
-.alert-message{margin: 30px 0;}
+.alert-message{margin: 10px 0;}
 .primary-switch{top: 12px;left: 0;bottom: 0;}
-.MuiTabs-scroller{margin-left: 8px;}
+.MuiTabs-scroller{margin-left: -10px;}
 .MuiTabs-scroller .PrivateTabIndicator-colorPrimary-9{margin-left: 10px;}
 
 }
@@ -421,7 +428,7 @@ option:not(:checked) { color: black; }
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
-.dashboard-content{padding: 6px 30px 25px 30px;}
+.dashboard-content{padding: 6px 20px 25px;}
 
  /* InnerPage-Form
 --------------------------------------------------------------------------------------------------------*/

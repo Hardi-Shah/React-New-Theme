@@ -168,12 +168,8 @@ const InnerPage = () => {
       {/* Start InnerPage*/}
       <div id="main" className="main-toggle">
         <div className="innerpage-content">
-          {/* <Grid container> */}
-          {/* <Grid item md={12} className="col-md-12"> */}
           <h3 className="innerpage-text">Maintenance</h3>
-          {/* </Grid> */}
 
-          {/* <Grid item md={12} className="col-md-12"> */}
           <div className="innerpage-table-div card">
             <div className="table-text">
               <h3>Sales</h3>
@@ -256,18 +252,15 @@ const InnerPage = () => {
               </div>
             </div>
           </div>
-          {/* </Grid> */}
-          {/* <Grid container> */}
-          {/* <Grid item md={12} className="col-md-12"> */}
+
           <div className="form-div card">
             <div className="analytics-text">
               <h3>Form Styles</h3>
             </div>
 
-            {/* <Grid item md={12} className="col-12"> */}
             <h3 className="one-column-head">One Column</h3>
             <Divider className="divider-one" />
-            {/* </Grid> */}
+
             <Grid container spacing={4}>
               <Grid item xs={12} md={12} sm={12} lg={12}>
                 <FormGroup>
@@ -486,103 +479,107 @@ const InnerPage = () => {
                   src={FileUploadIcon}
                   alt=""
                   className="upload-white-icon"
-                />{" "}
+                />
                 Upload
               </FormLabel>
               <TextField id="input-file" type="file" />
             </div>
 
-            <FormGroup>
-              <FormLabel className="checkbox-label" htmlFor="exampleInput">
-                Check Boxes
-              </FormLabel>
-            </FormGroup>
+            <div className="other-elements">
+              <FormGroup>
+                <FormLabel className="checkbox-label" htmlFor="exampleInput">
+                  Check Boxes
+                </FormLabel>
+              </FormGroup>
 
-            <FormGroup>
-              <div className="custom-Control custom-checkbox checkbox1">
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={checked}
-                      color="primary"
-                      disableRipple={true}
-                      onChange={handleChangeCheckbox}
-                    />
-                  }
-                  label="Option 1"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      defaultChecked
-                      color="primary"
-                      disableRipple={true}
-                    />
-                  }
-                  label="Option 2"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      defaultChecked
-                      color="primary"
-                      disableRipple={true}
-                    />
-                  }
-                  label="Option 3"
-                />
-              </div>
-            </FormGroup>
+              <FormGroup>
+                <div className="custom-Control custom-checkbox checkbox1">
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={checked}
+                        color="primary"
+                        disableRipple={true}
+                        onChange={handleChangeCheckbox}
+                      />
+                    }
+                    label="Option 1"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        defaultChecked
+                        color="primary"
+                        disableRipple={true}
+                      />
+                    }
+                    label="Option 2"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        defaultChecked
+                        color="primary"
+                        disableRipple={true}
+                      />
+                    }
+                    label="Option 3"
+                  />
+                </div>
+              </FormGroup>
+            </div>
 
-            <FormGroup>
-              <FormLabel className="checkbox-label" htmlFor="exampleInput">
-                Radio Buttons
-              </FormLabel>
-            </FormGroup>
+            <div className="other-elements">
+              <FormGroup>
+                <FormLabel className="checkbox-label" htmlFor="exampleInput">
+                  Radio Buttons
+                </FormLabel>
+              </FormGroup>
 
-            <FormGroup>
-              <div className="custom-Control custom-radio checkbox1">
-                <FormControlLabel
-                  value="option1"
-                  control={
-                    <Radio
-                      onChange={handleChangeRadio}
-                      color="primary"
-                      name="option"
-                      disableRipple={true}
-                      checked={radio === "option1"}
-                    />
-                  }
-                  label="Option 1"
-                />
-                <FormControlLabel
-                  value="option2"
-                  control={
-                    <Radio
-                      onChange={handleChangeRadio}
-                      color="primary"
-                      checked={radio === "option2"}
-                      name="option"
-                      disableRipple={true}
-                    />
-                  }
-                  label="Option 2"
-                />
-                <FormControlLabel
-                  value="option3"
-                  control={
-                    <Radio
-                      onChange={handleChangeRadio}
-                      checked={radio === "option3"}
-                      color="primary"
-                      disableRipple={true}
-                      name="option"
-                    />
-                  }
-                  label="Option 3"
-                />
-              </div>
-            </FormGroup>
+              <FormGroup>
+                <div className="custom-Control custom-radio checkbox1">
+                  <FormControlLabel
+                    value="option1"
+                    control={
+                      <Radio
+                        onChange={handleChangeRadio}
+                        color="primary"
+                        name="option"
+                        disableRipple={true}
+                        checked={radio === "option1"}
+                      />
+                    }
+                    label="Option 1"
+                  />
+                  <FormControlLabel
+                    value="option2"
+                    control={
+                      <Radio
+                        onChange={handleChangeRadio}
+                        color="primary"
+                        checked={radio === "option2"}
+                        name="option"
+                        disableRipple={true}
+                      />
+                    }
+                    label="Option 2"
+                  />
+                  <FormControlLabel
+                    value="option3"
+                    control={
+                      <Radio
+                        onChange={handleChangeRadio}
+                        checked={radio === "option3"}
+                        color="primary"
+                        disableRipple={true}
+                        name="option"
+                      />
+                    }
+                    label="Option 3"
+                  />
+                </div>
+              </FormGroup>
+            </div>
 
             <div className="button-element">
               <Button
@@ -704,10 +701,8 @@ const InnerPage = () => {
 
             <h3 className="tab-head">Tab Style</h3>
             <Divider className="tab-divider" />
-
             <DefaultTabs />
           </div>
-
           <Footer />
         </div>
       </div>
