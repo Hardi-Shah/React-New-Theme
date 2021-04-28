@@ -48,6 +48,5 @@ export const AlertDangerIcon = require("./danger-alert-icon.png").default;
 export const AlertInfoIcon = require("./info-alert-icon.png").default;
 export const AlertSuccessIcon = require("./success-alert-icon.png").default;
 export const AlertWarnIcon = require("./warning-alert-icon.png").default;
-export const FileUploadIcon =require('./file-upload-icon.png').default;
-export const AddIcon =require('./add-icon.png').default;
-
+export const FileUploadIcon = require("./file-upload-icon.png").default;
+export const AddIcon = require("./add-icon.png").default;
