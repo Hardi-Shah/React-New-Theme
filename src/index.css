@@ -322,8 +322,6 @@ option:not(:checked) { color: black; }
 
 /* Login
  --------------------------------------------------------------------------------------------------------*/
-.MuiGrid-root.sales-grid-one{max-width: 100%;flex-basis: 100%;}
-.MuiGrid-root.sales-grid-two{max-width: 100%;flex-basis: 100%;}
 .signup-account{margin-top: 40px;}
 .login-form{margin-top: 50px;}
 .login-left{width: 50%;}
@@ -334,6 +332,8 @@ option:not(:checked) { color: black; }
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
+.MuiGrid-root.sales-grid-one{max-width: 100%;flex-basis: 100%;}
+.MuiGrid-root.sales-grid-two{max-width: 100%;flex-basis: 100%;}
 .stats-icon{padding-top: 50px;}
 .user-icon{height: 35px;}
 .sales-graph{padding: 0 15px;}
