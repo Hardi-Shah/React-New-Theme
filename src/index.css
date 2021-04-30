@@ -428,6 +428,7 @@ option:not(:checked) { color: black; }
 .MuiGrid-root .forgot-password{margin-top: 15px;}
 .forgot-password{text-align: left;}
 
+
 /* Topbar
 --------------------------------------------------------------------------------------------------------*/
 .notifications .MuiMenu-paper.MuiPopover-paper {right: 19px;}
